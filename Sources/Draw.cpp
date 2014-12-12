@@ -77,9 +77,6 @@ void Draw::drawTop(bool loaded, int money, int lives, int wave_num, int speed){
     painter->drawText(350,CONSTANTS::B_ROWS*CONSTANTS::T_SIZE+45,wavedisplay);
     painter->drawText(80,CONSTANTS::B_ROWS*CONSTANTS::T_SIZE+45,QString::number(lives));
 
-    // DRAWS QUESTION BUTTON
-    painter->drawPixmap((CONSTANTS::B_COLS-3)*CONSTANTS::T_SIZE,CONSTANTS::B_ROWS*CONSTANTS::T_SIZE+15,CONSTANTS::SYMB_SIZE,CONSTANTS::SYMB_SIZE,*p.question);
-
     // DRAWS SPEED BUTTON DEPENDING ON SPEEDS
     if(speed == 0){
         painter->drawPixmap((CONSTANTS::B_COLS-2)*CONSTANTS::T_SIZE,CONSTANTS::B_ROWS*CONSTANTS::T_SIZE+15,CONSTANTS::SYMB_SIZE,CONSTANTS::SYMB_SIZE,*p.speed1);
