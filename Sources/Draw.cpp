@@ -98,8 +98,8 @@ void Draw::drawTop(bool loaded, int money, int lives, int wave_num, int speed){
 // DRAWS THE TOWERS IF PLACED AND THEIR ANIMATIONS
 void Draw::drawTowers(bool loaded, Tile gameBoard[][CONSTANTS::B_COLS]){
     if (loaded){
-        for(size_t i = 0, n = CONSTANTS::B_COLS; i < n; i++){ 
-            for(size_t j = 0, n = CONSTANTS::B_ROWS; j < n; j++){ 
+        for(size_t i = 0, n = CONSTANTS::B_ROWS; i < n; i++){ 
+            for(size_t j = 0, n = CONSTANTS::B_COLS; j < n; j++){ 
                 if(gameBoard[i][j].airID==CONSTANTS::M_TREE_ID){
                     painter->drawPixmap(j*CONSTANTS::T_SIZE,(i-1)*CONSTANTS::T_SIZE,CONSTANTS::T_SIZE,2*CONSTANTS::T_SIZE,*p.mTree);
                 }
@@ -242,8 +242,8 @@ void Draw::drawHealth(Wave waves[],int wave_num){
 // DRAWS UPGRADE/SELL OPTIONS WHEN USER CLICKS ON A TOWER
 void Draw::drawUpgrade(Tile gameBoard[][CONSTANTS::B_COLS],bool towerClicked){
     if(towerClicked){
-        for(size_t i = 0, n = CONSTANTS::B_COLS; i < n; i++){ 
-            for(size_t j = 0, n = CONSTANTS::B_ROWS; j < n; j++){ 
+        for(size_t i = 0, n = CONSTANTS::B_ROWS; i < n; i++){ 
+            for(size_t j = 0, n = CONSTANTS::B_COLS; j < n; j++){ 
 
                 if(gameBoard[i][j].isClicked){
                     QString upCost = QString::number(gameBoard[i][j].upgradeCost);
@@ -272,8 +272,8 @@ void Draw::drawUpgrade(Tile gameBoard[][CONSTANTS::B_COLS],bool towerClicked){
 // DRAWS TOWER SELECTION IF USER CLICKS ON PLACEABLE TILE
 void Draw::drawPick(bool towerPick,Tile gameBoard[][12] ){
     if(towerPick){
-         for(size_t i = 0, n = CONSTANTS::B_COLS; i < n; i++){ 
-            for(size_t j = 0, n = CONSTANTS::B_ROWS; j < n; j++){ 
+         for(size_t i = 0, n = CONSTANTS::B_ROWS; i < n; i++){ 
+            for(size_t j = 0, n = CONSTANTS::B_COLS; j < n; j++){ 
                 if(gameBoard[i][j].isClicked){
                     painter->drawPixmap(gameBoard[i][j].xC,gameBoard[i][j].yC, CONSTANTS::T_SIZE,CONSTANTS::T_SIZE, *p.shine);
                     painter->drawPixmap(gameBoard[i][j].xC-CONSTANTS::T_SIZE,gameBoard[i][j].yC-CONSTANTS::T_SIZE,CONSTANTS::T_SIZE,CONSTANTS::T_SIZE,*p.sPick);
