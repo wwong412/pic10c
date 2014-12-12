@@ -299,8 +299,8 @@ void Draw::drawWebs(Wave waves[], int wave_num){
 // ALSO DRAWS FROGS BEAM
 // ALSO DRAWS PORCUPINES NEEDLES
 void Draw::drawAcorns(Tile gameBoard[][CONSTANTS::B_COLS]){
-    for(size_t i = 0, n = CONSTANTS::B_COLS; i < n; i++){ 
-       for(size_t j = 0, n = CONSTANTS::B_ROWS; j < n; j++){ 
+    for(size_t i = 0, n = CONSTANTS::B_ROWS; i < n; i++){ 
+       for(size_t j = 0, n = CONSTANTS::B_COLS; j < n; j++){ 
             if(gameBoard[i][j].acorn.inGame){
                 // IF A FROG DRAW YELLOW LINE
                 if(gameBoard[i][j].airID==CONSTANTS::FROG_ID){
