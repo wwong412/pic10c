@@ -38,8 +38,8 @@ void Stages::define(){
     levels[3][50]=30;
 
     // level5
-    for(int i =0; i < 20; i++){
-        if(i<3)
+     for(int i =0; i < 20; i++){
+        if(i==4||i==10||i==15)
             levels[4][i]=3;
         else
             levels[4][i]=1;
