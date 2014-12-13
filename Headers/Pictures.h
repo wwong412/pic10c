@@ -4,6 +4,7 @@
 #include <QPixmap>
 
 // class loads all photos
+// !!!!!!!!!! couldn't upload images 
 class Pictures
 {
 public:
